@@ -3,11 +3,27 @@
 
 /* ---------- GENERAL ---------- */
 
+
 body {
     background: #61646d;
     color: #000;
     font: 14px/1.5em "Open Sans", sans-serif;
     margin: 0;
+}
+
+h1{
+    text-align: center;
+    font-size: 100px;
+    color: beige;
+    height:60px;
+    margin: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: 0 green;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-width: 20px;
+    border-left-style: solid;
 }
 
 fieldset {
@@ -40,24 +56,33 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .clearfix { *zoom: 1; }
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
     content: "";
     display: table;
 }
+
 .clearfix:after { clear: both; }
 
 .container {
     height: 44px;
-    left: 50%;
-    margin: -22px 0 0 -141px;
-    position: absolute;
-    top: 50%;
+    left: 25%;
+    position:absolute;
+    top: 20%;
+    margin: 10px;
+    border-top-style: solid;
+    border-top-width: 0;
+    border-bottom-style: solid;
+    border-bottom-width: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
+
 
 /* ---------- SEARCH ---------- */
 
 #search {
-    background: #42454e;
+    background:mintcream;
     border-radius: 3px;
     display: inline-block;
     padding: 7px;
@@ -76,7 +101,7 @@ input[type="search"]::-webkit-search-decoration {
 #search input[type="search"] {
     background: #fff;
     color: #42454e;
-    min-width: 184px;
+    min-width: 500px;
     padding: 6px 8px;
 }
 
