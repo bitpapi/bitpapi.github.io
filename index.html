@@ -1,40 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head lang="en-US">
-    <meta charset="UTF-8">
+---
+layout: default
+---
 
-    <title>Price Pundit</title>
+<div class="home">
 
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <h1>Posts</h1>
 
-</head>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-<body>
-
-    <div class="container">
-        <h1>Price Pundit</h1>
-        <div id="search">   <!-- begin search -->
-
-            <form action="javascript:void(0);" method="GET">
-
-                <fieldset class="clearfix">
-
-                    <label>
-                        <input type="search" name="search" value="Search for product price histories."
-                               onBlur="if(this.value=='')this.value='Search for product price histories.'"
-                               onFocus="if(this.value=='Search for product price histories.')this.value='' ">
-                    </label> <!-- JS because of IE support; better: placeholder="What are you looking for?" -->
-                    <input type="submit" value="Search" class="button">
-
-                </fieldset>
-
-            </form>
-
-        </div> <!-- end search -->
-    </div>
-
-</body>
-
-</html>
+</div>
